@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 # Take a single line pandas dataframe row of length n^2, 
 # return n x n numpy array
 
-def reshape_image(row_number, dframe, labels):
+def reshape_image(row_number, dframe):
     data_row = dframe[row_number:(row_number + 1)].values[0]
     n = np.sqrt(data_row.size).astype(np.int)
     img = list()
