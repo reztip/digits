@@ -15,6 +15,17 @@ def reshape_image(row_number, dframe, labels):
     img = np.array(img)
     return img
 
+def reshape_image_by_row(data_row):
+    data_row = data_row.values[0]
+    n = np.sqrt(data_row.size).astype(np.int)
+    img = list()
+    for i in range(n):
+        row = np.array(data_row[i * n : (i + 1) * n])
+        img.append(row)
+    img = np.array(img)
+    return img
+
+
 def get_label(row_number, labels):
     return labels[row_number]
 
