@@ -18,3 +18,21 @@ def avg_img(full_dframe, labelnum):
     avg_of_class = average_of_class(grouped, labelnum)
     return reshape_image_by_row(avg_of_class)
 
+def score_classifier(clf, X_train, y_train, X_test, y_test):
+    print("The score on the training set is {:3.1f}%, and on the testing set is {:3.1f}%.".\
+            format(clf.score(X_train, y_train), clf.score(X_test, y_test) * 100)) 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
