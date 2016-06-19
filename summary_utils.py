@@ -21,7 +21,6 @@ def avg_img(full_dframe, labelnum):
 def score_classifier(y_true, y_pred, method = accuracy_score, ds = 'Training'):
     acc = method(y_true, y_pred)
     print(ds)
-    print('-' * 30)
     print("The score on the data set is {:3.1f}%".\
      format(acc *  100)) 
     print('-' * 30)
